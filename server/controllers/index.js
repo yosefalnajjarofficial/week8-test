@@ -1,13 +1,13 @@
 const express = require('express');
 
-const error = require("./error");
+const error = require('./error');
 const city = require('./city');
 
 const router = express.Router();
 
-router.get('/cities', city.getAllCities);
+router.get('/cities', city.renderCities);
+router.get('/all-cities', city.getAllCities);
 router.post('/add-city', city.add);
-
 
 router.use(error.client);
 router.use(error.server);
