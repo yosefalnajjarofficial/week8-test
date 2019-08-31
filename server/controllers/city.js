@@ -1,17 +1,17 @@
 const { getCities } = require('../database/queries/getCities');
 const { addCity } = require('../database/queries/addCity');
 
-exports.getAllCities = (req, res) => {
+exports.getAllCities = (req, res, next) => {
   getCities()
     .then(result => {
       res.json(result.rows);
     })
-    .catch(err => console.log('err:', err));
+    .catch(err => next(err));
 };
 
-exports.add = (req, res) => {
+exports.add = (req, res, next) => {
   const cityInfo = req.body;
   addCity(cityInfo)
     .then(() => res.redirect('/'))
-    .catch(err => console.log('err:', err));
+    .catch(err => next(err));
 };
