@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -21,7 +22,8 @@ body {
   text-decoration: none;
 }
 
-form, .table-container {
+form,
+.table-container {
   width: 60%;
   margin: 0 auto 50px;
 }
@@ -37,16 +39,25 @@ form input {
   line-height: 35px;
 }
 
-form button {
-  background-color: salmon;
+.brand-logo {
+  text-decoration: none;
   color: white;
-  padding: 10px;
-  display: block;
-  border-style: initial;
-  font-size: 18px;
+  font-size: 1.4rem;
 }
 
-table, table tr {
+button {
+  width: 13%;
+  height: 33px;
+  margin-top: 4%;
+  background-color: salmon;
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 314px;
+}
+
+table,
+table tr {
   width: 100%;
 }
 
@@ -62,4 +73,8 @@ table tr th {
 table tr td {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
 }
