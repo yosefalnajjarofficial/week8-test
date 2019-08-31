@@ -2,14 +2,14 @@ fetch("/cities")
   .then(res => res.json())
   .then(cities => {
     const table = document.getElementById("cities-table");
-    cities.forEach(c => {
+    cities.forEach(city => {
       const row = document.createElement("tr");
       const name = document.createElement("td");
-      name.textContent = c.name;
+      name.textContent = city.name;
       row.appendChild(name);
-      const city = document.createElement("td");
-      city.textContent = c.city;
-      row.appendChild(city);
+      const country = document.createElement("td");
+      country.textContent = city.country;
+      row.appendChild(country);
       table.appendChild(row);
     });
   });
